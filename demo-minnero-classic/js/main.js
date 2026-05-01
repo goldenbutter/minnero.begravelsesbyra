@@ -1,7 +1,7 @@
 // === TRANSLATIONS ===
 const translations = {
   no: {
-    'nav.logo':     'Lysning Begravelsesbyrå',
+    'nav.logo':     'Minnero Begravelsesbyrå',
     'nav.home':     'Hjem',
     'nav.services': 'Tjenester',
     'nav.about':    'Om oss',
@@ -13,10 +13,10 @@ const translations = {
     'hero.cta':      'Ta kontakt i ro',
     'hero.img.alt':  'Stille vann i morgendis ved daggry',
 
-    'intro.label':   'Lysning Begravelsesbyrå',
+    'intro.label':   'Minnero Begravelsesbyrå',
     'intro.heading': 'Når noen som står deg nær går bort, trenger du ikke gå veien alene.',
     'intro.p1':      'Et dødsfall snur hverdagen på hodet. Mens sorgen er fersk, kommer det også mange praktiske spørsmål — papirer, valg, frister, mennesker som skal varsles. Vi tar oss av det vi kan, så du får tid til det som er viktigst.',
-    'intro.p2':      'Lysning er et lite, lokalt byrå. Det betyr at den samme personen følger dere fra første samtale til siste hilsen — og at vi tar oss tid.',
+    'intro.p2':      'Minnero er et lite, lokalt byrå. Det betyr at den samme personen følger dere fra første samtale til siste hilsen — og at vi tar oss tid.',
 
     'services.label':   'Våre tjenester',
     'services.heading': 'Det vi kan ta oss av',
@@ -43,7 +43,7 @@ const translations = {
     'preparing.li4':      'Minnesamvær og praktisk oppfølging i tiden etterpå',
     'preparing.img.alt':  'Hender holder hvite blomster forsiktig',
 
-    'aboutpreview.label':   'Om Lysning',
+    'aboutpreview.label':   'Om Minnero',
     'aboutpreview.heading': 'Et lite byrå med god tid',
     'aboutpreview.p1':      'Vi er to gravferdskonsulenter som har valgt å holde byrået lite. Det betyr at den samme personen følger dere hele veien, og at vi har tid til å lytte før vi planlegger.',
     'aboutpreview.p2':      'Vi tror at en verdig avskjed begynner med en stille samtale — og fortsetter med trygg, lokal håndverksstolthet i alle små valg.',
@@ -62,7 +62,7 @@ const translations = {
     'footer.phone':    '+47 73 00 00 00',
     'footer.email':    'post@lysning.no',
     'footer.response': 'Døgnvakt — alle dager, hele året',
-    'footer.copyright':'© 2026 Lysning Begravelsesbyrå',
+    'footer.copyright':'© 2026 Minnero Begravelsesbyrå',
     'footer.dev':      'Utviklet av Bithun',
 
     // Vipps / demo modal
@@ -112,10 +112,10 @@ const translations = {
     'detail4.li4':   'Henvisning til skifteadvokat når saken krever det',
 
     // About page
-    'about.banner.title': 'Om Lysning',
+    'about.banner.title': 'Om Minnero',
     'about.banner.sub':   'Et lite byrå — to mennesker — én stille tilnærming.',
     'story.heading':      'Hvorfor vi gjør dette',
-    'story.p1':           'Lysning ble startet i 2014 av Anna Sande og Henrik Berg, etter mange år hver for seg i større begravelsesbyråer. Det de savnet, og som ble ideen bak Lysning, var den lille tingen: tid. Tid til å sette seg ned. Tid til å la familier finne sine egne ord. Tid til å ikke forhaste valg som man bærer med seg lenge.',
+    'story.p1':           'Minnero ble startet i 2014 av Anna Sande og Henrik Berg, etter mange år hver for seg i større begravelsesbyråer. Det de savnet, og som ble ideen bak Minnero, var den lille tingen: tid. Tid til å sette seg ned. Tid til å la familier finne sine egne ord. Tid til å ikke forhaste valg som man bærer med seg lenge.',
     'story.p2':           'Vi har bevisst valgt å holde byrået lite. Det betyr at den samme personen følger dere gjennom alt — fra første samtale, gjennom seremonien, til den siste meldingen til Skatteetaten er sendt. Dere skal slippe å forklare den samme historien til fem ulike mennesker.',
     'story.p3':           'Vi tror også på lokal forankring. Blomstene våre kommer fra binderier i samme by. Trykksakene blir laget hos en familieeid trykker rundt hjørnet. Kistene kommer fra håndverkere som vi kjenner, som vi har vært på besøk hos, og som lager dem selv. Det er ikke billigst — men det er sant.',
     'story.p4':           'En verdig avskjed begynner med en stille samtale. Det fortsetter med trygg, lokal håndverksstolthet i alle små valg. Det er det vi forsøker å gjøre, hver eneste gang.',
@@ -160,7 +160,7 @@ const translations = {
   },
 
   en: {
-    'nav.logo':     'Lysning Funeral Home',
+    'nav.logo':     'Minnero Funeral Home',
     'nav.home':     'Home',
     'nav.services': 'Services',
     'nav.about':    'About',
@@ -172,10 +172,10 @@ const translations = {
     'hero.cta':      'Reach out in calm',
     'hero.img.alt':  'Still water in morning mist at dawn',
 
-    'intro.label':   'Lysning Funeral Home',
+    'intro.label':   'Minnero Funeral Home',
     'intro.heading': "When someone close to you passes, you don't have to walk the road alone.",
     'intro.p1':      "A death turns daily life upside down. While grief is fresh, many practical questions also arrive — papers, choices, deadlines, people to be told. We take care of what we can, so you have time for what matters most.",
-    'intro.p2':      'Lysning is a small, local funeral home. That means the same person follows you from the first conversation to the last farewell — and that we take our time.',
+    'intro.p2':      'Minnero is a small, local funeral home. That means the same person follows you from the first conversation to the last farewell — and that we take our time.',
 
     'services.label':   'Our services',
     'services.heading': 'What we can take on',
@@ -202,7 +202,7 @@ const translations = {
     'preparing.li4':      'Memorial gathering and practical follow-up afterwards',
     'preparing.img.alt':  'Hands gently holding white flowers',
 
-    'aboutpreview.label':   'About Lysning',
+    'aboutpreview.label':   'About Minnero',
     'aboutpreview.heading': 'A small firm, with time',
     'aboutpreview.p1':      'We are two funeral consultants who have chosen to keep the firm small. That means the same person follows you the whole way, and that we have time to listen before we plan.',
     'aboutpreview.p2':      'We believe a dignified farewell begins with a quiet conversation — and continues with calm, local craftsmanship in every small choice.',
@@ -221,7 +221,7 @@ const translations = {
     'footer.phone':    '+47 73 00 00 00',
     'footer.email':    'post@lysning.no',
     'footer.response': 'On call — every day, all year',
-    'footer.copyright':'© 2026 Lysning Funeral Home',
+    'footer.copyright':'© 2026 Minnero Funeral Home',
     'footer.dev':      'Developed by Bithun',
 
     'modal.title':  'This is a demo',
@@ -268,10 +268,10 @@ const translations = {
     'detail4.li3':   'Cancellation of subscriptions, electricity, insurance',
     'detail4.li4':   'Referral to a probate lawyer when the case requires it',
 
-    'about.banner.title': 'About Lysning',
+    'about.banner.title': 'About Minnero',
     'about.banner.sub':   'A small firm — two people — one quiet approach.',
     'story.heading':      'Why we do this',
-    'story.p1':           'Lysning was started in 2014 by Anna Sande and Henrik Berg, after many years each in larger funeral homes. What they missed, and what became the idea behind Lysning, was the small thing: time. Time to sit down. Time to let families find their own words. Time not to rush choices you carry with you for a long time.',
+    'story.p1':           'Minnero was started in 2014 by Anna Sande and Henrik Berg, after many years each in larger funeral homes. What they missed, and what became the idea behind Minnero, was the small thing: time. Time to sit down. Time to let families find their own words. Time not to rush choices you carry with you for a long time.',
     'story.p2':           'We have deliberately chosen to keep the firm small. That means the same person follows you through everything — from the first conversation, through the service, to the last notice sent to the tax authorities. You should not have to explain the same story to five different people.',
     'story.p3':           'We also believe in local roots. Our flowers come from florists in the same town. The print is made at a family-run printer round the corner. The caskets come from craftspeople we know, whom we have visited, and who make them themselves. It is not the cheapest — but it is true.',
     'story.p4':           'A dignified farewell begins with a quiet conversation. It continues with calm, local craftsmanship in every small choice. That is what we try to do, every single time.',

@@ -763,7 +763,7 @@ p { color: var(--color-text); }
 .page-banner-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(44, 53, 61, 0.65) 0%, rgba(44, 53, 61, 0.2) 100%);
+  background: linear-gradient(to top, rgba(44, 53, 61, 0.45) 0%, rgba(44, 53, 61, 0.08) 100%);
 }
 
 .page-banner-content {
@@ -1199,6 +1199,7 @@ p { color: var(--color-text); }
   .hero { height: 70vh; }
   .hero-content { padding: 2rem 1.5rem 3rem; }
   .hero-content h1 { font-size: clamp(1.8rem, 7vw, 2.4rem); }
+  /* hero-video override moved below base rule — see end of file */
 
   .intro { padding: 4rem 1.5rem; }
 
@@ -1525,11 +1526,59 @@ p { color: var(--color-text); }
   .memorial-year-label::after  { right: calc(50% - 100px); width: 50px; }
 }
 
+/* === Memorial card float — continuous bob, GPU-composite translateY only === */
+@keyframes card-float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+.memorial-card {
+  animation: card-float 4s ease-in-out infinite;
+}
+
+.memorial-grid .memorial-card:nth-child(2) { animation-delay: 0.55s; }
+.memorial-grid .memorial-card:nth-child(3) { animation-delay: 1.1s; }
+.memorial-grid .memorial-card:nth-child(4) { animation-delay: 1.65s; }
+.memorial-grid .memorial-card:nth-child(5) { animation-delay: 2.2s; }
+.memorial-grid .memorial-card:nth-child(6) { animation-delay: 2.75s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .memorial-card { animation: none; }
+}
+
+/* === Wreath circular decor — matches classic exactly === */
+.values-decor {
+  display: block;
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 1.75rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  padding: 6px;
+}
+
+/* === Interstitial without caption — brighter, matches classic photo-strip tone === */
+.interstitial--photo .interstitial-overlay {
+  background: linear-gradient(to bottom, rgba(44, 53, 61, 0.05), rgba(44, 53, 61, 0.18));
+}
+.interstitial--photo.visible .interstitial-bg {
+  opacity: 1;
+}
+
 /* === Hero video element (premium) === */
 .hero-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 50%;
+  object-position: center 8%;
   display: block;
+}
+
+@media (max-width: 768px) {
+  .hero-video {
+    object-position: 77% 65%;
+    transform: scale(1.22);
+  }
 }

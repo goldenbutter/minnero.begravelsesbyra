@@ -261,8 +261,8 @@ p { color: var(--color-text); }
 }
 
 .mobile-menu a {
-  font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
   font-weight: 500;
   letter-spacing: 0.01em;
   color: var(--color-text);
@@ -326,6 +326,7 @@ p { color: var(--color-text); }
   max-width: 720px;
   margin-bottom: 1rem;
   font-weight: 400;
+  font-style: italic;
   line-height: 1.18;
   letter-spacing: 0.005em;
 }
@@ -1201,6 +1202,7 @@ p { color: var(--color-text); }
   .hero { height: 70vh; }
   .hero-content { padding: 2rem 1.5rem 3rem; }
   .hero-content h1 { font-size: clamp(1.8rem, 7vw, 2.4rem); }
+  .hero-candle .hero-bg { background-position: 74% 30%; transform: scale(1.04); }
 
   .intro { padding: 4rem 1.5rem; }
 
@@ -1273,6 +1275,40 @@ p { color: var(--color-text); }
 
 @media (max-width: 768px) {
   .photo-strip { height: 36vh; min-height: 240px; }
+}
+
+/* === Photo-strip caption overlay (static, no animation — matches premium quote style) === */
+.photo-strip-caption {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(44, 53, 61, 0.12), rgba(44, 53, 61, 0.38));
+}
+
+.photo-strip-caption blockquote {
+  max-width: 640px;
+  color: rgba(255, 255, 255, 0.92);
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: clamp(1.2rem, 2.5vw, 1.85rem);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.photo-strip-caption cite {
+  display: block;
+  margin-top: 1rem;
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* === About-page values section gets a small decorative wreath above the heading === */
