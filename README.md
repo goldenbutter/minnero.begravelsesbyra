@@ -31,17 +31,42 @@ Both tiers share: the same Cormorant Garamond + Inter type pairing, the same col
 
 Plain HTML / CSS / JS — no framework, no build step. Each tier is a self-contained folder.
 
-```
-demo-minnero-classic/
-  index.html · tjenester.html · om-oss.html · kontakt.html
-  css/style.css · js/main.js · favicon.svg
-  assets/images/
+## Folder structure
 
-demo-minnero-premium/
-  index.html · tjenester.html · om-oss.html · kontakt.html · minneside.html
-  css/style.css · js/main.js · favicon.svg
-  data/memorials.json
-  assets/images/ · assets/videos/
+```
+minnero.begravelsesbyra/
+├── README.md
+├── demo-minnero-classic/
+│   ├── index.html
+│   ├── tjenester.html
+│   ├── om-oss.html
+│   ├── kontakt.html
+│   ├── favicon.svg
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── main.js
+│   └── assets/
+│       └── images/         (12 shared images — hero, hero-candle, preparing,
+│                            wreath, chapel-interior, morning-water, banners,
+│                            interstitials, memorial-banner)
+└── demo-minnero-premium/
+    ├── index.html
+    ├── tjenester.html
+    ├── om-oss.html
+    ├── kontakt.html
+    ├── minneside.html       (memorial wall — premium-only)
+    ├── favicon.svg
+    ├── css/
+    │   └── style.css
+    ├── js/
+    │   └── main.js
+    ├── data/
+    │   └── memorials.json   (memorial wall content — JSON-driven)
+    └── assets/
+        ├── images/          (12 shared + minneside-graveyard.jpg)
+        └── videos/
+            └── hero-candle.mp4
 ```
 
 ## Local preview
@@ -53,8 +78,7 @@ python -m http.server 5500
 #   http://localhost:5500/demo-minnero-premium/
 ```
 
-## Image generation
 
-AI-generated imagery prompts live in [.claude/Nano-Banana-prompt.md](.claude/Nano-Banana-prompt.md). Note: Nano Banana exports `.jpeg` (not `.jpg`) — match the extension in any new HTML/CSS references.
 
-Developed by Bithun.
+Developed by [Bithun](https://github.com/goldenbutter)
+
