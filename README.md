@@ -6,6 +6,13 @@ Two-tier static site demo for a small Norwegian funeral home. The same content i
 
 **Minnero** — *minne* (remembrance) + *ro* (peace, calm). Distinct from the family business *Lysning* (interior design).
 
+## Live
+
+- Classic: [demo-minnero-classic.ibithun.com](https://demo-minnero-classic.ibithun.com/)
+- Premium: [demo-minnero-premium.ibithun.com](https://demo-minnero-premium.ibithun.com/)
+
+Deployed on Vercel — two projects sharing this repo, each scoped to its tier folder via per-project Root Directory + `git diff HEAD^ HEAD --quiet ./` Ignored Build Step. Web Analytics enabled on both.
+
 ## Tiers
 
 | | demo-minnero-classic | demo-minnero-premium |
