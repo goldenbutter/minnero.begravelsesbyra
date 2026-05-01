@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minneside — Lysning Begravelsesbyrå</title>
+  <meta name="description" content="En stille minneside — navn på dem vi har fulgt til hvile. Lys et lys i tankene." />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="nav" role="navigation" aria-label="Hovednavigasjon">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M16 4 L16 28" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M9 9 Q16 5 23 9" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          <circle cx="16" cy="4" r="1.4" fill="currentColor"/>
+        </svg>
+        <span data-i18n="nav.logo">Lysning Begravelsesbyrå</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html"   data-i18n="nav.home">Hjem</a></li>
+        <li><a href="tjenester.html" data-i18n="nav.services">Tjenester</a></li>
+        <li><a href="om-oss.html"   data-i18n="nav.about">Om oss</a></li>
+        <li><a href="minneside.html" data-i18n="nav.memorial">Minneside</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.contact">Kontakt</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+        <button type="button" class="hamburger" id="hamburger" aria-label="Åpne meny" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Navigasjonsmeny">
+    <a href="index.html"   data-i18n="nav.home">Hjem</a>
+    <a href="tjenester.html" data-i18n="nav.services">Tjenester</a>
+    <a href="om-oss.html"   data-i18n="nav.about">Om oss</a>
+    <a href="minneside.html" data-i18n="nav.memorial">Minneside</a>
+    <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
+    <button type="button" class="lang-toggle" id="mobile-lang-toggle">EN</button>
+  </div>
+
+  <main>
+
+    <section class="memorial-banner page-banner">
+      <div class="page-banner-bg fade-in" style="background-image: url('assets/images/memorial-banner.jpg');"></div>
+      <div class="page-banner-overlay"></div>
+      <div class="page-banner-content">
+        <h1 data-i18n="memorial.banner.title">Minneside</h1>
+        <p data-i18n="memorial.banner.sub">Et stille rom for navnene vi bærer videre.</p>
+      </div>
+    </section>
+
+    <section class="memorial-intro">
+      <div class="memorial-intro-inner reveal">
+        <h2 data-i18n="memorial.intro.heading">Til minne om dem vi har fulgt</h2>
+        <p data-i18n="memorial.intro.p1">På denne siden samler vi navnene på menneskene vi har fulgt til hvile. Bak hvert navn ligger et liv — av familie, arbeid, smil, stille morgener og det de selv aldri rakk å si til oss. Vi minnes dem her, med tillatelse fra de pårørende.</p>
+        <p data-i18n="memorial.intro.p2">Om du ønsker at noen som er nær deg skal hedres her — eller fjernes — så ta kontakt med oss. Det er en personlig avgjørelse, og den ligger alltid hos familien.</p>
+        <div class="memorial-divider" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="memorial-wall">
+      <div class="memorial-wall-inner" id="memorial-wall-root">
+        <p class="memorial-empty" data-i18n="memorial.loading">Henter minner …</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3 data-i18n="nav.logo">Lysning Begravelsesbyrå</h3>
+        <p data-i18n="footer.tagline">Verdig følge i sorgens tid — døgnvakt, lokal og personlig.</p>
+        <address class="footer-address" data-i18n="footer.address">Kirkebakken 12, 7042 Trondheim</address>
+      </div>
+      <nav class="footer-links" aria-label="Sidelenker">
+        <h4 data-i18n="footer.links">Sider</h4>
+        <ul>
+          <li><a href="index.html"   data-i18n="nav.home">Hjem</a></li>
+          <li><a href="tjenester.html" data-i18n="nav.services">Tjenester</a></li>
+          <li><a href="om-oss.html"   data-i18n="nav.about">Om oss</a></li>
+          <li><a href="minneside.html" data-i18n="nav.memorial">Minneside</a></li>
+          <li><a href="kontakt.html" data-i18n="nav.contact">Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <h4 data-i18n="footer.contact">Kontakt</h4>
+        <p><a href="tel:+4773000000" data-i18n="footer.phone">+47 73 00 00 00</a></p>
+        <p><a href="mailto:post@lysning.no" data-i18n="footer.email">post@lysning.no</a></p>
+        <p class="response-note" data-i18n="footer.response">Døgnvakt — alle dager, hele året</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.copyright">© 2026 Lysning Begravelsesbyrå</span>
+      <a href="#" data-i18n="footer.dev">Utviklet av Bithun</a>
+      <img src="https://visitor-badge.laobi.icu/badge?page_id=demo-lysning-premium.ibithun.com&left_color=%23333333&right_color=%235C6B7A&left_text=Views" alt="Sidevisninger" />
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="vipps-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <svg class="modal-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" aria-hidden="true">
+        <path d="M16 4 L16 28" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M9 9 Q16 5 23 9" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <circle cx="16" cy="4" r="1.4" fill="currentColor"/>
+      </svg>
+      <h2 id="modal-title" data-i18n="modal.title">Dette er en demo</h2>
+      <p data-i18n="modal.body1">Faktiske bestillinger gjøres ved personlig samtale. Ta kontakt på telefon eller e-post, så møtes vi i ro — hjemme hos dere eller hos oss.</p>
+      <p>
+        <span data-i18n="modal.body2">Du kan også skrive til oss på </span>
+        <a href="mailto:post@lysning.no" data-i18n="modal.email">post@lysning.no</a>
+      </p>
+      <p class="modal-locked" data-i18n="modal.locked">Dette er en demo — Vipps-betaling aktiveres når din konto er satt opp.</p>
+      <button type="button" class="modal-close-btn" data-i18n="modal.close">Lukk</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

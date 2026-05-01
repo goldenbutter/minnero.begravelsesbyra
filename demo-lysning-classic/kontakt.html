@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt — Lysning Begravelsesbyrå</title>
+  <meta name="description" content="Ta kontakt med Lysning Begravelsesbyrå — døgnvakt på telefon, eller send en stille melding via skjemaet." />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="nav" role="navigation" aria-label="Hovednavigasjon">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M16 4 L16 28" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M9 9 Q16 5 23 9" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          <circle cx="16" cy="4" r="1.4" fill="currentColor"/>
+        </svg>
+        <span data-i18n="nav.logo">Lysning Begravelsesbyrå</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html"   data-i18n="nav.home">Hjem</a></li>
+        <li><a href="tjenester.html" data-i18n="nav.services">Tjenester</a></li>
+        <li><a href="om-oss.html"   data-i18n="nav.about">Om oss</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.contact">Kontakt</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+        <button type="button" class="hamburger" id="hamburger" aria-label="Åpne meny" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Navigasjonsmeny">
+    <a href="index.html"   data-i18n="nav.home">Hjem</a>
+    <a href="tjenester.html" data-i18n="nav.services">Tjenester</a>
+    <a href="om-oss.html"   data-i18n="nav.about">Om oss</a>
+    <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
+    <button type="button" class="lang-toggle" id="mobile-lang-toggle">EN</button>
+  </div>
+
+  <main>
+
+    <section class="page-banner">
+      <div class="page-banner-bg" style="background-image: url('assets/images/banner-contact.jpg');"></div>
+      <div class="page-banner-overlay"></div>
+      <div class="page-banner-content">
+        <h1 data-i18n="contact.banner.title">Ta kontakt</h1>
+        <p data-i18n="contact.banner.sub">Vi svarer i ro, men aldri sent. Døgnvakt — alle dager.</p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-inner">
+
+        <div class="contact-info reveal">
+          <h2 data-i18n="contact.info.heading">Vi er der når du trenger oss</h2>
+          <p data-i18n="contact.info.p1">Om dødsfallet nettopp har skjedd, ring oss direkte. Vi tar telefonen hele døgnet, alle dager. Du trenger ikke ha papirer eller forberedelser klare — det ordner vi sammen, etter hvert.</p>
+
+          <div class="contact-detail">
+            <h4 data-i18n="contact.detail.phone.label">Telefon — døgnvakt</h4>
+            <p><a href="tel:+4773000000" data-i18n="contact.detail.phone.value">+47 73 00 00 00</a></p>
+          </div>
+
+          <div class="contact-detail">
+            <h4 data-i18n="contact.detail.email.label">E-post</h4>
+            <p><a href="mailto:post@lysning.no" data-i18n="contact.detail.email.value">post@lysning.no</a></p>
+          </div>
+
+          <div class="contact-detail">
+            <h4 data-i18n="contact.detail.address.label">Besøksadresse</h4>
+            <p data-i18n="contact.detail.address.value">Kirkebakken 12, 7042 Trondheim</p>
+          </div>
+
+          <div class="contact-detail">
+            <h4 data-i18n="contact.detail.hours.label">Åpningstider — kontor</h4>
+            <p data-i18n="contact.detail.hours.value">Mandag–fredag, 09–16<br>Telefonen er åpen hele døgnet</p>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal" style="transition-delay: 0.15s;">
+          <h3 data-i18n="contact.form.heading">Send oss en stille melding</h3>
+          <p data-i18n="contact.form.intro">Vi tar kontakt så snart vi kan, vanligvis innen et par timer. For akutte henvendelser, vennligst ring.</p>
+
+          <form id="contact-form" novalidate>
+            <div class="form-field">
+              <label for="cf-name" data-i18n="form.name.label">Navn</label>
+              <input type="text" id="cf-name" name="name" required autocomplete="name" />
+            </div>
+
+            <div class="form-field">
+              <label for="cf-email" data-i18n="form.email.label">E-post</label>
+              <input type="email" id="cf-email" name="email" required autocomplete="email" />
+            </div>
+
+            <div class="form-field">
+              <label for="cf-phone" data-i18n="form.phone.label">Telefon (valgfritt)</label>
+              <input type="tel" id="cf-phone" name="phone" autocomplete="tel" />
+            </div>
+
+            <div class="form-field">
+              <label for="cf-topic" data-i18n="form.topic.label">Hva gjelder henvendelsen?</label>
+              <select id="cf-topic" name="topic">
+                <option value="seremoni" data-i18n="form.topic.opt1">Planlegging av seremoni</option>
+                <option value="kremasjon" data-i18n="form.topic.opt2">Kremasjon eller gravferd</option>
+                <option value="minnesamvær" data-i18n="form.topic.opt3">Minnesamvær</option>
+                <option value="juridisk" data-i18n="form.topic.opt4">Juridisk avvikling</option>
+                <option value="annet" data-i18n="form.topic.opt5">Annet — uforpliktende samtale</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="cf-message" data-i18n="form.message.label">Melding</label>
+              <textarea id="cf-message" name="message" rows="5"></textarea>
+              <p class="form-note" data-i18n="form.message.note">Skriv så lite eller mye du orker. Vi tar resten i samtale.</p>
+            </div>
+
+            <button type="submit" class="btn btn-primary" data-i18n="form.submit">Send melding</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3 data-i18n="nav.logo">Lysning Begravelsesbyrå</h3>
+        <p data-i18n="footer.tagline">Verdig følge i sorgens tid — døgnvakt, lokal og personlig.</p>
+        <address class="footer-address" data-i18n="footer.address">Kirkebakken 12, 7042 Trondheim</address>
+      </div>
+      <nav class="footer-links" aria-label="Sidelenker">
+        <h4 data-i18n="footer.links">Sider</h4>
+        <ul>
+          <li><a href="index.html"   data-i18n="nav.home">Hjem</a></li>
+          <li><a href="tjenester.html" data-i18n="nav.services">Tjenester</a></li>
+          <li><a href="om-oss.html"   data-i18n="nav.about">Om oss</a></li>
+          <li><a href="kontakt.html" data-i18n="nav.contact">Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <h4 data-i18n="footer.contact">Kontakt</h4>
+        <p><a href="tel:+4773000000" data-i18n="footer.phone">+47 73 00 00 00</a></p>
+        <p><a href="mailto:post@lysning.no" data-i18n="footer.email">post@lysning.no</a></p>
+        <p class="response-note" data-i18n="footer.response">Døgnvakt — alle dager, hele året</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.copyright">© 2026 Lysning Begravelsesbyrå</span>
+      <a href="#" data-i18n="footer.dev">Utviklet av Bithun</a>
+      <img src="https://visitor-badge.laobi.icu/badge?page_id=demo-lysning-classic.ibithun.com&left_color=%23333333&right_color=%235C6B7A&left_text=Views" alt="Sidevisninger" />
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="vipps-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <svg class="modal-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" aria-hidden="true">
+        <path d="M16 4 L16 28" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M9 9 Q16 5 23 9" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <circle cx="16" cy="4" r="1.4" fill="currentColor"/>
+      </svg>
+      <h2 id="modal-title" data-i18n="modal.title">Dette er en demo</h2>
+      <p data-i18n="modal.body1">Faktiske bestillinger gjøres ved personlig samtale. Ta kontakt på telefon eller e-post, så møtes vi i ro — hjemme hos dere eller hos oss.</p>
+      <p>
+        <span data-i18n="modal.body2">Du kan også skrive til oss på </span>
+        <a href="mailto:post@lysning.no" data-i18n="modal.email">post@lysning.no</a>
+      </p>
+      <p class="modal-locked" data-i18n="modal.locked">Dette er en demo — Vipps-betaling aktiveres når din konto er satt opp.</p>
+      <button type="button" class="modal-close-btn" data-i18n="modal.close">Lukk</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

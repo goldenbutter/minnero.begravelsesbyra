@@ -1,0 +1,11 @@
+CLAUDE.md
+.claude/
+.vscode/
+screenshot/
+*.zip
+.env
+.env.*
+.DS_Store
+Thumbs.db
+node_modules/
+_public/

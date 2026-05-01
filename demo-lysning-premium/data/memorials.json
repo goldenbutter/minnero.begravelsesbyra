@@ -1,0 +1,94 @@
+{
+  "_comment": "Read-only memorial wall data. Customer would later edit this file directly to add or remove entries. Each entry: name, born (YYYY), died (YYYY), optional note (one short line). Sorted by year of passing, newest first.",
+  "memorials": [
+    {
+      "name": "Ingrid Marie Sandvik",
+      "born": "1937",
+      "died": "2026",
+      "note": "Et stille smil — en fast hånd. Savnet av tre generasjoner."
+    },
+    {
+      "name": "Olav Berg",
+      "born": "1949",
+      "died": "2026",
+      "note": "Mannen i verkstedet. Alltid tid til en kopp kaffe."
+    },
+    {
+      "name": "Ragnhild Solli",
+      "born": "1954",
+      "died": "2026",
+      "note": "Lærerinnen som husket hvert eneste navn."
+    },
+    {
+      "name": "Jens Aksel Lien",
+      "born": "1942",
+      "died": "2026",
+      "note": "Fjellet var hans kirke. Stillheten hans språk."
+    },
+    {
+      "name": "Bjørg Helene Dahle",
+      "born": "1933",
+      "died": "2025",
+      "note": "Strikket varme i alt hun rørte ved."
+    },
+    {
+      "name": "Kristian Vik",
+      "born": "1956",
+      "died": "2025",
+      "note": "Båten lå alltid klar. Han ventet aldri på været."
+    },
+    {
+      "name": "Margit Frøystad",
+      "born": "1929",
+      "died": "2025",
+      "note": "Tre fulle hyller med dagbøker — ett stille liv."
+    },
+    {
+      "name": "Per Olav Nordbø",
+      "born": "1947",
+      "died": "2025",
+      "note": "Sønn av elva. Far til fire. Bestefar til ni."
+    },
+    {
+      "name": "Kari Birgitte Aune",
+      "born": "1951",
+      "died": "2025",
+      "note": "Lyttet før hun snakket. Det er sjeldent."
+    },
+    {
+      "name": "Sverre Ulvang",
+      "born": "1938",
+      "died": "2025",
+      "note": "Han plantet trær han aldri rakk å se vokse opp."
+    },
+    {
+      "name": "Astrid Bekkelund",
+      "born": "1944",
+      "died": "2024",
+      "note": "Hun skjenket aldri en kopp uten en historie ved siden av."
+    },
+    {
+      "name": "Harald Storli",
+      "born": "1940",
+      "died": "2024",
+      "note": "Gikk opp tidlig. Kom alltid hjem først."
+    },
+    {
+      "name": "Solveig Tønnesen",
+      "born": "1932",
+      "died": "2024",
+      "note": "Søndagskaffen var aldri det samme uten henne."
+    },
+    {
+      "name": "Knut Olav Engen",
+      "born": "1959",
+      "died": "2024"
+    },
+    {
+      "name": "Else Marie Hov",
+      "born": "1936",
+      "died": "2024",
+      "note": "Salmer på leppene. Lys i hendene."
+    }
+  ]
+}

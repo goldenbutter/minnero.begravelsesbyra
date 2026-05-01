@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Om oss — Lysning Begravelsesbyrå</title>
+  <meta name="description" content="Et lite, lokalt byrå med god tid. Vi er to gravferdskonsulenter som tror på en stille, personlig avskjed." />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="nav" role="navigation" aria-label="Hovednavigasjon">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M16 4 L16 28" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M9 9 Q16 5 23 9" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          <circle cx="16" cy="4" r="1.4" fill="currentColor"/>
+        </svg>
+        <span data-i18n="nav.logo">Lysning Begravelsesbyrå</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html"   data-i18n="nav.home">Hjem</a></li>
+        <li><a href="tjenester.html" data-i18n="nav.services">Tjenester</a></li>
+        <li><a href="om-oss.html"   data-i18n="nav.about">Om oss</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.contact">Kontakt</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+        <button type="button" class="hamburger" id="hamburger" aria-label="Åpne meny" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Navigasjonsmeny">
+    <a href="index.html"   data-i18n="nav.home">Hjem</a>
+    <a href="tjenester.html" data-i18n="nav.services">Tjenester</a>
+    <a href="om-oss.html"   data-i18n="nav.about">Om oss</a>
+    <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
+    <button type="button" class="lang-toggle" id="mobile-lang-toggle">EN</button>
+  </div>
+
+  <main>
+
+    <section class="page-banner">
+      <div class="page-banner-bg" style="background-image: url('assets/images/banner-about.jpg');"></div>
+      <div class="page-banner-overlay"></div>
+      <div class="page-banner-content">
+        <h1 data-i18n="about.banner.title">Om Lysning</h1>
+        <p data-i18n="about.banner.sub">Et lite byrå — to mennesker — én stille tilnærming.</p>
+      </div>
+    </section>
+
+    <section class="story-section">
+      <div class="story-inner reveal">
+        <h2 data-i18n="story.heading">Hvorfor vi gjør dette</h2>
+        <div class="story-text">
+          <p data-i18n="story.p1">Lysning ble startet i 2014 av Anna Sande og Henrik Berg, etter mange år hver for seg i større begravelsesbyråer. Det de savnet, og som ble ideen bak Lysning, var den lille tingen: tid. Tid til å sette seg ned. Tid til å la familier finne sine egne ord. Tid til å ikke forhaste valg som man bærer med seg lenge.</p>
+          <p data-i18n="story.p2">Vi har bevisst valgt å holde byrået lite. Det betyr at den samme personen følger dere gjennom alt — fra første samtale, gjennom seremonien, til den siste meldingen til Skatteetaten er sendt. Dere skal slippe å forklare den samme historien til fem ulike mennesker.</p>
+          <p data-i18n="story.p3">Vi tror også på lokal forankring. Blomstene våre kommer fra binderier i samme by. Trykksakene blir laget hos en familieeid trykker rundt hjørnet. Kistene kommer fra håndverkere som vi kjenner, som vi har vært på besøk hos, og som lager dem selv. Det er ikke billigst — men det er sant.</p>
+          <p data-i18n="story.p4">En verdig avskjed begynner med en stille samtale. Det fortsetter med trygg, lokal håndverksstolthet i alle små valg. Det er det vi forsøker å gjøre, hver eneste gang.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="values-section">
+      <div class="values-inner">
+        <span class="section-label" data-i18n="values.label">Hva vi står for</span>
+        <h2 data-i18n="values.heading">Tre stille løfter</h2>
+
+        <div class="values-grid reveal-stagger">
+          <div class="value-block reveal">
+            <svg class="value-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" aria-hidden="true">
+              <circle cx="16" cy="13" r="6" stroke-width="1.2" fill="none"/>
+              <path d="M8 26 C9 22 13 20 16 20 C19 20 23 22 24 26" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+            </svg>
+            <h3 data-i18n="value1.title">Personlig oppfølging</h3>
+            <p data-i18n="value1.text">Den samme personen følger dere fra første samtale til siste papir er sendt inn. Ingen ny ansiktsskifte underveis.</p>
+          </div>
+          <div class="value-block reveal">
+            <svg class="value-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" aria-hidden="true">
+              <path d="M6 22 C10 18 14 18 16 22 C18 18 22 18 26 22" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+              <path d="M6 16 L26 16" stroke-width="1.2" stroke-linecap="round"/>
+              <circle cx="16" cy="9" r="2" fill="currentColor"/>
+            </svg>
+            <h3 data-i18n="value2.title">Lokal forankring</h3>
+            <p data-i18n="value2.text">Blomster, trykksaker, kister og samarbeidspartnere — alt er lokalt. Vi kjenner menneskene bak hvert valg.</p>
+          </div>
+          <div class="value-block reveal">
+            <svg class="value-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" aria-hidden="true">
+              <rect x="8" y="10" width="16" height="14" rx="1" stroke-width="1.2" fill="none"/>
+              <path d="M11 14 L21 14 M11 18 L17 18" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+            <h3 data-i18n="value3.title">Åpne priser</h3>
+            <p data-i18n="value3.text">Vi forklarer alle valg åpent — også de økonomiske. Ingen overraskelser, ingen oppsalg, ingen skjulte kostnader.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-cta">
+      <div class="contact-cta-inner">
+        <h2 data-i18n="contactcta.heading">Vi er tilgjengelige hele døgnet</h2>
+        <p data-i18n="contactcta.p1">Om du nettopp har mistet noen, eller bare ønsker en uforpliktende samtale — ring oss eller send oss en stille melding. Vi ringer tilbake i ro.</p>
+        <a href="tel:+4773000000" class="contact-cta-phone" data-i18n="contactcta.phone">+47 73 00 00 00</a>
+        <span class="contact-cta-hours" data-i18n="contactcta.hours">Døgnvakt — alle dager</span>
+        <div>
+          <a href="kontakt.html" class="btn btn-outline-light" data-i18n="contactcta.btn">Send oss en melding</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3 data-i18n="nav.logo">Lysning Begravelsesbyrå</h3>
+        <p data-i18n="footer.tagline">Verdig følge i sorgens tid — døgnvakt, lokal og personlig.</p>
+        <address class="footer-address" data-i18n="footer.address">Kirkebakken 12, 7042 Trondheim</address>
+      </div>
+      <nav class="footer-links" aria-label="Sidelenker">
+        <h4 data-i18n="footer.links">Sider</h4>
+        <ul>
+          <li><a href="index.html"   data-i18n="nav.home">Hjem</a></li>
+          <li><a href="tjenester.html" data-i18n="nav.services">Tjenester</a></li>
+          <li><a href="om-oss.html"   data-i18n="nav.about">Om oss</a></li>
+          <li><a href="kontakt.html" data-i18n="nav.contact">Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <h4 data-i18n="footer.contact">Kontakt</h4>
+        <p><a href="tel:+4773000000" data-i18n="footer.phone">+47 73 00 00 00</a></p>
+        <p><a href="mailto:post@lysning.no" data-i18n="footer.email">post@lysning.no</a></p>
+        <p class="response-note" data-i18n="footer.response">Døgnvakt — alle dager, hele året</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.copyright">© 2026 Lysning Begravelsesbyrå</span>
+      <a href="#" data-i18n="footer.dev">Utviklet av Bithun</a>
+      <img src="https://visitor-badge.laobi.icu/badge?page_id=demo-lysning-classic.ibithun.com&left_color=%23333333&right_color=%235C6B7A&left_text=Views" alt="Sidevisninger" />
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="vipps-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <svg class="modal-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" aria-hidden="true">
+        <path d="M16 4 L16 28" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M9 9 Q16 5 23 9" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <circle cx="16" cy="4" r="1.4" fill="currentColor"/>
+      </svg>
+      <h2 id="modal-title" data-i18n="modal.title">Dette er en demo</h2>
+      <p data-i18n="modal.body1">Faktiske bestillinger gjøres ved personlig samtale. Ta kontakt på telefon eller e-post, så møtes vi i ro — hjemme hos dere eller hos oss.</p>
+      <p>
+        <span data-i18n="modal.body2">Du kan også skrive til oss på </span>
+        <a href="mailto:post@lysning.no" data-i18n="modal.email">post@lysning.no</a>
+      </p>
+      <p class="modal-locked" data-i18n="modal.locked">Dette er en demo — Vipps-betaling aktiveres når din konto er satt opp.</p>
+      <button type="button" class="modal-close-btn" data-i18n="modal.close">Lukk</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

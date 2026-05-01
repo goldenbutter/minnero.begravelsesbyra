@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tjenester — Lysning Begravelsesbyrå</title>
+  <meta name="description" content="Planlegging av seremoni, kremasjon, minnesamvær og juridisk avvikling — alt på ett sted, i ditt eget tempo." />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="nav" role="navigation" aria-label="Hovednavigasjon">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M16 4 L16 28" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M9 9 Q16 5 23 9" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          <circle cx="16" cy="4" r="1.4" fill="currentColor"/>
+        </svg>
+        <span data-i18n="nav.logo">Lysning Begravelsesbyrå</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html"   data-i18n="nav.home">Hjem</a></li>
+        <li><a href="tjenester.html" data-i18n="nav.services">Tjenester</a></li>
+        <li><a href="om-oss.html"   data-i18n="nav.about">Om oss</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.contact">Kontakt</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+        <button type="button" class="hamburger" id="hamburger" aria-label="Åpne meny" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Navigasjonsmeny">
+    <a href="index.html"   data-i18n="nav.home">Hjem</a>
+    <a href="tjenester.html" data-i18n="nav.services">Tjenester</a>
+    <a href="om-oss.html"   data-i18n="nav.about">Om oss</a>
+    <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
+    <button type="button" class="lang-toggle" id="mobile-lang-toggle">EN</button>
+  </div>
+
+  <main>
+
+    <section class="page-banner">
+      <div class="page-banner-bg" style="background-image: url('assets/images/banner-services.jpg');"></div>
+      <div class="page-banner-overlay"></div>
+      <div class="page-banner-content">
+        <h1 data-i18n="services.banner.title">Våre tjenester</h1>
+        <p data-i18n="services.banner.sub">Det vi kan ta oss av — i ro, og i den rekkefølgen som passer dere.</p>
+      </div>
+    </section>
+
+    <section class="services-detail">
+      <div class="services-detail-inner">
+
+        <article class="service-block" id="seremoni">
+          <div class="service-block-head">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" aria-hidden="true">
+              <path d="M16 4 L16 28" stroke-width="1.2" stroke-linecap="round"/>
+              <path d="M10 18 L16 14 L22 18" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="16" cy="4" r="1.4" fill="currentColor"/>
+            </svg>
+            <h3 data-i18n="detail1.title">Planlegging av seremoni</h3>
+          </div>
+          <p data-i18n="detail1.p1">En seremoni skal speile den dere har mistet — ikke en mal. Vi planlegger sammen, og lar dere bestemme tempoet. Om dere ønsker det, kan vi også ta hånd om alt det praktiske, så dere får være tilstede.</p>
+          <p data-i18n="detail1.p2">Vi har kontakt med kirker, kapeller og livssynssamfunn i hele regionen, og kan også tilrettelegge for hjemme- eller naturseremonier.</p>
+          <ul class="service-block-list">
+            <li data-i18n="detail1.li1">Kirkelig, livssynsåpen eller borgerlig seremoni</li>
+            <li data-i18n="detail1.li2">Musikk, sang og solister — vi formidler kontakt</li>
+            <li data-i18n="detail1.li3">Blomster og dekorasjon — fra lokale binderier</li>
+            <li data-i18n="detail1.li4">Trykk av program og minneord</li>
+            <li data-i18n="detail1.li5">Bærere, transport og praktisk gjennomføring</li>
+          </ul>
+        </article>
+
+        <article class="service-block" id="kremasjon">
+          <div class="service-block-head">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" aria-hidden="true">
+              <path d="M16 6 C12 6 10 10 10 14 C10 18 12 21 16 22 C20 21 22 18 22 14 C22 10 20 6 16 6 Z" stroke-width="1.2" fill="none"/>
+              <path d="M16 22 L16 26" stroke-width="1.2" stroke-linecap="round"/>
+              <path d="M11 26 L21 26" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+            <h3 data-i18n="detail2.title">Kremasjon og gravferd</h3>
+          </div>
+          <p data-i18n="detail2.p1">Vi forklarer hva som skjer, og når. Valget mellom kistegravferd og kremasjon, valg av kiste eller urne, transport, og melding til myndighetene — alt går vi gjennom uten å forhaste, og uten å selge.</p>
+          <p data-i18n="detail2.p2">Vi har et utvalg av enkle og varige kister og urner, og forklarer åpent hva hvert valg innebærer praktisk og økonomisk.</p>
+          <ul class="service-block-list">
+            <li data-i18n="detail2.li1">Stell og bekledning av avdøde</li>
+            <li data-i18n="detail2.li2">Henting og transport innenlands</li>
+            <li data-i18n="detail2.li3">Valg av kiste, urne og gravsted</li>
+            <li data-i18n="detail2.li4">Kontakt med kirkegårdsforvaltning</li>
+            <li data-i18n="detail2.li5">Urnenedsettelse, også i ettertid</li>
+          </ul>
+        </article>
+
+        <article class="service-block" id="minnesamvær">
+          <div class="service-block-head">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" aria-hidden="true">
+              <path d="M6 22 L26 22" stroke-width="1.2" stroke-linecap="round"/>
+              <path d="M9 22 L9 14 M14 22 L14 12 M18 22 L18 12 M23 22 L23 14" stroke-width="1.2" stroke-linecap="round"/>
+              <path d="M16 8 L16 4" stroke-width="1.2" stroke-linecap="round"/>
+              <circle cx="16" cy="8" r="1.6" fill="currentColor"/>
+            </svg>
+            <h3 data-i18n="detail3.title">Minnesamvær</h3>
+          </div>
+          <p data-i18n="detail3.p1">Et minnesamvær gir rom til å samles i ro etter seremonien — til å dele en kopp kaffe, et minne, en stille stund. Vi hjelper med lokaler, servering og dekorasjon, så dere slipper å tenke på det.</p>
+          <p data-i18n="detail3.p2">Vi samarbeider med flere lokale kafeer, menighetshus og selskapslokaler, og kan også arrangere et lite samvær hjemme hos dere.</p>
+          <ul class="service-block-list">
+            <li data-i18n="detail3.li1">Booking av lokale — fra 10 til 200 gjester</li>
+            <li data-i18n="detail3.li2">Enkel og verdig servering, ofte med lokal forankring</li>
+            <li data-i18n="detail3.li3">Bordpynt og dekorasjon i tråd med seremonien</li>
+            <li data-i18n="detail3.li4">Hjelp med program for samværet</li>
+          </ul>
+        </article>
+
+        <article class="service-block" id="juridisk">
+          <div class="service-block-head">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" aria-hidden="true">
+              <rect x="8" y="6" width="16" height="20" rx="1" stroke-width="1.2" fill="none"/>
+              <path d="M11 12 L21 12 M11 16 L21 16 M11 20 L18 20" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+            <h3 data-i18n="detail4.title">Juridisk avvikling</h3>
+          </div>
+          <p data-i18n="detail4.p1">Etter seremonien gjenstår det praktiske: skifte, melding til offentlige instanser, oppsigelse av abonnementer og forsikringer, og — for noen — skifte av bolig eller eiendeler. Vi loser dere gjennom det som ofte oppleves som en uoversiktlig labyrint.</p>
+          <p data-i18n="detail4.p2">Vi gir ingen juridisk rådgivning som krever advokat, men vi vet hvor grensen går — og henviser videre til lokale advokater når det trengs.</p>
+          <ul class="service-block-list">
+            <li data-i18n="detail4.li1">Melding til Folkeregisteret, NAV og Skatteetaten</li>
+            <li data-i18n="detail4.li2">Oversikt over skifteformer og frister</li>
+            <li data-i18n="detail4.li3">Oppsigelse av abonnementer, strøm, forsikring</li>
+            <li data-i18n="detail4.li4">Henvisning til skifteadvokat når saken krever det</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="contact-cta">
+      <div class="contact-cta-inner">
+        <h2 data-i18n="contactcta.heading">Vi er tilgjengelige hele døgnet</h2>
+        <p data-i18n="contactcta.p1">Om du nettopp har mistet noen, eller bare ønsker en uforpliktende samtale — ring oss eller send oss en stille melding. Vi ringer tilbake i ro.</p>
+        <a href="tel:+4773000000" class="contact-cta-phone" data-i18n="contactcta.phone">+47 73 00 00 00</a>
+        <span class="contact-cta-hours" data-i18n="contactcta.hours">Døgnvakt — alle dager</span>
+        <div>
+          <a href="kontakt.html" class="btn btn-outline-light" data-i18n="contactcta.btn">Send oss en melding</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3 data-i18n="nav.logo">Lysning Begravelsesbyrå</h3>
+        <p data-i18n="footer.tagline">Verdig følge i sorgens tid — døgnvakt, lokal og personlig.</p>
+        <address class="footer-address" data-i18n="footer.address">Kirkebakken 12, 7042 Trondheim</address>
+      </div>
+
+      <nav class="footer-links" aria-label="Sidelenker">
+        <h4 data-i18n="footer.links">Sider</h4>
+        <ul>
+          <li><a href="index.html"   data-i18n="nav.home">Hjem</a></li>
+          <li><a href="tjenester.html" data-i18n="nav.services">Tjenester</a></li>
+          <li><a href="om-oss.html"   data-i18n="nav.about">Om oss</a></li>
+          <li><a href="kontakt.html" data-i18n="nav.contact">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contact">
+        <h4 data-i18n="footer.contact">Kontakt</h4>
+        <p><a href="tel:+4773000000" data-i18n="footer.phone">+47 73 00 00 00</a></p>
+        <p><a href="mailto:post@lysning.no" data-i18n="footer.email">post@lysning.no</a></p>
+        <p class="response-note" data-i18n="footer.response">Døgnvakt — alle dager, hele året</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span data-i18n="footer.copyright">© 2026 Lysning Begravelsesbyrå</span>
+      <a href="#" data-i18n="footer.dev">Utviklet av Bithun</a>
+      <img src="https://visitor-badge.laobi.icu/badge?page_id=demo-lysning-classic.ibithun.com&left_color=%23333333&right_color=%235C6B7A&left_text=Views" alt="Sidevisninger" />
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="vipps-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <svg class="modal-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" aria-hidden="true">
+        <path d="M16 4 L16 28" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M9 9 Q16 5 23 9" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <circle cx="16" cy="4" r="1.4" fill="currentColor"/>
+      </svg>
+      <h2 id="modal-title" data-i18n="modal.title">Dette er en demo</h2>
+      <p data-i18n="modal.body1">Faktiske bestillinger gjøres ved personlig samtale. Ta kontakt på telefon eller e-post, så møtes vi i ro — hjemme hos dere eller hos oss.</p>
+      <p>
+        <span data-i18n="modal.body2">Du kan også skrive til oss på </span>
+        <a href="mailto:post@lysning.no" data-i18n="modal.email">post@lysning.no</a>
+      </p>
+      <p class="modal-locked" data-i18n="modal.locked">Dette er en demo — Vipps-betaling aktiveres når din konto er satt opp.</p>
+      <button type="button" class="modal-close-btn" data-i18n="modal.close">Lukk</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
