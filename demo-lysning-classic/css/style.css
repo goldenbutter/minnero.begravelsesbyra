@@ -1251,3 +1251,39 @@ p { color: var(--color-text); }
     rgba(44, 53, 61, 0.45) 50%,
     rgba(44, 53, 61, 0.78) 100%);
 }
+
+/* === Photo strip — quiet full-bleed photo between sections (classic, static) === */
+.photo-strip {
+  position: relative;
+  height: 50vh;
+  min-height: 320px;
+  max-height: 520px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.photo-strip::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(44, 53, 61, 0.05), rgba(44, 53, 61, 0.18));
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .photo-strip { height: 36vh; min-height: 240px; }
+}
+
+/* === About-page values section gets a small decorative wreath above the heading === */
+.values-decor {
+  display: block;
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 1.75rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  padding: 6px;
+}
