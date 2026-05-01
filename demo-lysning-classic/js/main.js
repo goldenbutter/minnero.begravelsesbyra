@@ -447,13 +447,15 @@ function initContactForm() {
 }
 
 // === INIT ===
+// Classic = Norwegian-only static site. i18n + scroll animations are kept in source
+// but commented out at init — re-enable both lines if customer pays for the EN upsell.
 document.addEventListener('DOMContentLoaded', () => {
-  applyTranslations();
-  initLangToggle();
+  // applyTranslations();   // disabled — classic is NO-only (re-enable for EN upsell)
+  // initLangToggle();      // disabled — classic is NO-only (re-enable for EN upsell)
   initNav();
-  initScrollAnimations();
+  // initScrollAnimations(); // disabled — classic is static, no fade-in on scroll
   initModal();
   initContactForm();
 
-  document.querySelector('main')?.classList.add('page-fade');
+  // document.querySelector('main')?.classList.add('page-fade'); // disabled — classic is static
 });

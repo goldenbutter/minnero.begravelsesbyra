@@ -77,16 +77,15 @@ p { color: var(--color-text); }
   padding: 0 2rem;
 }
 
-/* === FADE-IN ANIMATION === */
+/* === FADE-IN ANIMATION (DISABLED on classic — kept for upsell re-enable) === */
+/*
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(14px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-
 .page-fade {
   animation: fadeUp 0.9s ease-out both;
 }
-
 .reveal {
   opacity: 0;
   transform: translateY(16px);
@@ -96,11 +95,13 @@ p { color: var(--color-text); }
   opacity: 1;
   transform: translateY(0);
 }
-
 .reveal-stagger > *:nth-child(1) { transition-delay: 0s; }
 .reveal-stagger > *:nth-child(2) { transition-delay: 0.15s; }
 .reveal-stagger > *:nth-child(3) { transition-delay: 0.30s; }
 .reveal-stagger > *:nth-child(4) { transition-delay: 0.45s; }
+*/
+/* Make any element marked .reveal/.reveal.visible visible by default since the JS init is disabled */
+.reveal { opacity: 1; transform: none; }
 
 /* === NAVIGATION === */
 .nav {
@@ -339,7 +340,7 @@ p { color: var(--color-text); }
 
 .btn-primary:hover {
   background: var(--color-primary-dark);
-  transform: translateY(-1px);
+  /* transform: translateY(-1px); */ /* lift disabled on classic */
 }
 
 .btn-outline-light {
@@ -374,12 +375,12 @@ p { color: var(--color-text); }
   gap: 0.4rem;
   border-bottom: 1px solid var(--color-accent-light);
   padding-bottom: 2px;
-  transition: gap var(--transition), border-color var(--transition);
+  transition: border-color var(--transition);
 }
 
 .text-link:hover {
-  gap: 0.6rem;
   border-color: var(--color-primary);
+  /* gap: 0.6rem; */ /* arrow-slide disabled on classic */
 }
 
 /* === INTRO / WELCOME === */
@@ -447,14 +448,16 @@ p { color: var(--color-text); }
   border-radius: var(--radius-card);
   padding: 2.5rem 2rem;
   box-shadow: var(--shadow-card);
-  transition: box-shadow var(--transition), transform var(--transition);
   border: 1px solid rgba(213, 210, 203, 0.5);
 }
 
+/* Hover lift disabled on classic — premium-only effect.
+.service-card { transition: box-shadow var(--transition), transform var(--transition); }
 .service-card:hover {
   box-shadow: var(--shadow-card-hover);
   transform: translateY(-3px);
 }
+*/
 
 .service-icon {
   width: 38px;
@@ -1061,15 +1064,15 @@ p { color: var(--color-text); }
   max-width: 460px;
   width: 100%;
   text-align: center;
-  transform: translateY(14px);
-  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease;
+  /* transform: translateY(14px); */ /* slide-in disabled on classic */
+  transition: opacity 0.3s ease;
   opacity: 0;
   box-shadow: 0 20px 60px rgba(44, 53, 61, 0.3);
   border: 1px solid var(--color-border);
 }
 
 .modal-backdrop.open .modal-box {
-  transform: translateY(0);
+  /* transform: translateY(0); */
   opacity: 1;
 }
 
