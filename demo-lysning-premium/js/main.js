@@ -411,20 +411,37 @@ function initNav() {
   const mobileMenu = document.getElementById('mobile-menu');
 
   if (hamburger && mobileMenu) {
-    hamburger.addEventListener('click', () => {
+    const closeMenu = () => {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    };
+
+    hamburger.addEventListener('click', e => {
+      e.stopPropagation();
       const isOpen = mobileMenu.classList.toggle('open');
       hamburger.classList.toggle('open', isOpen);
       hamburger.setAttribute('aria-expanded', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+      // Body scroll stays unlocked — the liquid-glass panel only covers
+      // 320px of the viewport, so the rest of the page should remain
+      // scrollable behind it.
     });
 
+    // Close when a link inside is tapped
     mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      });
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Close when user clicks anywhere outside the panel
+    document.addEventListener('click', e => {
+      if (!mobileMenu.classList.contains('open')) return;
+      if (mobileMenu.contains(e.target) || hamburger.contains(e.target)) return;
+      closeMenu();
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMenu();
     });
   }
 
