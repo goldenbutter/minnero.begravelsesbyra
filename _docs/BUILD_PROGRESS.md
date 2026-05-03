@@ -264,6 +264,35 @@ begravelsesbyrå-demo/
 - If customer wants animations back: uncomment the `.reveal`/`.page-fade` block in [demo-lysning-classic/css/style.css](../demo-lysning-classic/css/style.css) AND remove the safety fallback line.
 - DO NOT propagate this strip to premium — premium keeps i18n + animations + visitor badge.
 
+## 2329366 — OG fix: dedicated 1200×630 sub-600 KB variants per page
+**Date:** 2026-05-03
+**Tier(s) touched:** both (classic + premium)
+**Reason:** opengraph.xyz preview (screenshot) flagged the live site on every page: image was 1376×768 instead of 1200×630, and several source banners were 700 KB – 1 MB — above the WhatsApp 600 KB ceiling that silently drops link previews to text-only. The previous Open Graph commit (`21635d1`) had pointed every page at full-resolution in-page banners, which is the recurring family-wide failure mode documented in `_docs/_skill/CUSTOMER-FORK-FINISH-CHECKLIST.md` Section A.
+
+**Files changed:** all 9 HTML pages (og:image, og:image:width, og:image:height, twitter:image) + 5 new OG variants mirrored to both tiers (10 new image files total).
+
+**Generated variants (ffmpeg `scale=1200:630:force_original_aspect_ratio=increase,crop=1200:630 -q:v 5`):**
+- `minnero-og-preview.jpg`  (11 KB)  ← from `hero-candle.jpg`     → index/landing
+- `minnero-og-services.jpg` (127 KB) ← from `banner-services.jpg` → tjenester
+- `minnero-og-about.jpg`    (143 KB) ← from `banner-about.jpg`    → om-oss
+- `minnero-og-contact.jpg`  (69 KB)  ← from `banner-contact.jpg`  → kontakt
+- `minnero-og-memorial.jpg` (14 KB)  ← from `memorial-banner.jpg` → minneside (premium-only)
+
+All five well under 600 KB; alt text on every page preserved unchanged.
+
+**Section B note (also applies retroactively to commits `1584a67` and `f07b99d`):** Those two prior docs/`.gitignore` commits silently CANCELED on both Vercel projects because `git diff HEAD^ HEAD --quiet ./` returned 0 (no files in either tier root). The live site stayed on `21635d1` until this commit. The OG fix touches files in BOTH `demo-minnero-classic/` and `demo-minnero-premium/` tier roots, so the head's diff comes back non-empty for both projects' Ignored Build Step → both rebuilt → both now serve fresh content. Bundling the entire fix in one commit avoided the multi-commit-push gotcha entirely.
+
+### Customer-fork finish checklist — completed 2026-05-03
+
+- [x] **Section A** — OG variants generated (filename pattern: `minnero-og-*.jpg`), all under 600 KB at 1200×630, every HTML page references them via absolute `https://demo-minnero-<tier>.ibithun.com/...` URL with matching `twitter:image`. Verified via grep: zero remaining `og:image` references to `hero-*` / `banner-*` / `memorial-banner` source files; zero remaining `og:image:width content="2400"`; zero relative-path `og:image` values.
+- [x] **Section B** — Vercel deployment for SHA `2329366` reached `state: READY` on production for both tiers (deployment IDs: classic=`dpl_kskPtCy5U2iHV5f4p71uYUfg63v9`, premium=`dpl_75S6iE8qR9mjhLo7mjhh8kyeXvEC`). Recovered the two prior CANCELED docs commits in the same push.
+- [x] **Section C** — Live `curl` of all 9 production URLs confirms each page serves the new `minnero-og-*.jpg` variant with `og:image:width content="1200"` and `og:image:height content="630"`, plus matching `twitter:image`. HEAD requests on the OG image URLs return `200 OK` with `Content-Length` 11151 (preview) and 14448 (memorial) — well below the 600 KB WhatsApp ceiling. The remaining opengraph.xyz warnings shown in the screenshot ("missing headline-in-image", "missing call-to-action-in-image", "description short") are aesthetic — checklist explicitly says skip for noindex demos.
+- Reference: `C:\Project\prototypes\_docs\_skill\CUSTOMER-FORK-FINISH-CHECKLIST.md`.
+
+**Notes for future agents:**
+- If the customer ships replacement banner photos later, regenerate the corresponding `minnero-og-*.jpg` from the new source via the same ffmpeg recipe — otherwise the link preview will show stale photos.
+- WhatsApp caches OG previews ~30 min independently from opengraph.xyz. To bust on demand: paste `https://demo-minnero-<tier>.ibithun.com/?v=2` (any unused query string) into a fresh chat once.
+
 ## 02b5ba3 — Initial commit: Lysning classic + premium scaffold
 **Date:** 2026-05-01
 **Tier(s) touched:** scaffolding
